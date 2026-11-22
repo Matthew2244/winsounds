@@ -193,3 +193,26 @@ Test hooks: `WINSOUNDS_PLAYER` swaps the player binary (point it at a script
 that hangs to exercise the watchdog), and `WINSOUNDS_TRASH_DIR` watches another
 folder as the Trash. `winsounds-agent --dry-run` logs "would play" and plays
 nothing, and `winsounds install --log-only` runs the agent that way.
+
+## MaccessHub soundpacks
+
+`tools/to_maccesshub.py` turns every imported scheme into a MaccessHub event
+soundpack in `~/Library/Application Support/MaccessHub/Soundpacks/<scheme
+name>/` (one file per MaccessHub event id plus `pack.json`). Each slot takes
+the first Windows event the scheme has (app open: Open Program, else Restore;
+quit: Close Program, else Minimize; menus: Menu Pop-up and Menu Command; disks,
+USB, Bluetooth, displays and power: Device Connect and Disconnect; sleep and
+wake: Logoff and Logon; and so on, the table is `SLOTS` in the script). Menu,
+row, Space, window and Music slots skip anything over 1.5 s; slots with no
+sensible match stay empty. Schemes filling fewer than 3 slots are skipped.
+Audio is copied out of the WinSounds folders, never into this repo. Re-running
+rebuilds its own packs (marked by a hidden `.winsounds-pack.json`) unless they
+were edited since; `--dry-run`, `--verbose`, `--scheme`, `--force`, `--remove`.
+MaccessHub reads packs at launch, so quit and reopen it afterwards.
+
+When a WinSounds pack is MaccessHub's event pack, turn off the WinSounds events
+MaccessHub now covers, or they play twice: sleep, wake, device_connect,
+device_disconnect (or `usb` and `bluetooth`), power_connected,
+power_disconnected, battery_low, battery_critical, network_up, network_down,
+lock and unlock (if MaccessHub's lock slots are on), app_open and app_close.
+Keep startup, login, shutdown, empty_trash, new_mail and default_beep.
