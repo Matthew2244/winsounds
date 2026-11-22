@@ -1,0 +1,17 @@
+# Never commit audio. Sounds are imported locally with `winsounds import`.
+*.wav
+*.WAV
+*.wma
+*.WMA
+*.mp3
+*.MP3
+*.m4a
+*.aif
+*.aiff
+*.ogg
+*.flac
+*.caf
+Schemes/
+build/
+*.profraw
+.DS_Store

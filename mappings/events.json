@@ -1,0 +1,710 @@
+{
+ "format": 1,
+ "about": "Generic sound events. Platform-neutral: a scheme maps these ids to filenames; platforms.json says which events each OS can trigger. 'aliases' are matched against normalized filenames (and folder names): lowercase, letters and digits only. An alias ending in * matches as a prefix, and only after every exact alias failed. Earlier aliases win when several files match one event. 'fallback' is tried, in order, when the scheme has no sound for the event itself.",
+ "events": [
+  {
+   "id": "startup",
+   "label": "Startup",
+   "windows": "Start Windows",
+   "aliases": [
+    "startup",
+    "windowsstartup",
+    "windowsstart",
+    "startwindows",
+    "sysstart",
+    "systemstart",
+    "themicrosoftsound",
+    "startupchime",
+    "bootup",
+    "boot",
+    "bootsound",
+    "poweron",
+    "tada",
+    "strt"
+   ],
+   "fallback": [
+    "login"
+   ]
+  },
+  {
+   "id": "login",
+   "label": "Log in",
+   "windows": "Windows Logon",
+   "aliases": [
+    "logon",
+    "logonsound",
+    "windowslogon",
+    "windowsntlogonsound",
+    "login",
+    "loginsound",
+    "signin",
+    "welcome",
+    "welcom98",
+    "hello"
+   ],
+   "fallback": [
+    "startup"
+   ]
+  },
+  {
+   "id": "logout",
+   "label": "Log out",
+   "windows": "Windows Logoff",
+   "aliases": [
+    "logoff",
+    "logoffsound",
+    "windowslogoff",
+    "windowsntlogoffsound",
+    "logout",
+    "signout",
+    "goodbye",
+    "gdbye",
+    "bye"
+   ],
+   "fallback": [
+    "shutdown"
+   ]
+  },
+  {
+   "id": "shutdown",
+   "label": "Shut down",
+   "windows": "Exit Windows",
+   "aliases": [
+    "shutdown",
+    "windowsshutdown",
+    "windowsexit",
+    "exitwindows",
+    "sysexit",
+    "systemexit",
+    "poweroff",
+    "shutdownlong",
+    "shut",
+    "chimes"
+   ],
+   "fallback": [
+    "logout"
+   ]
+  },
+  {
+   "id": "sleep",
+   "label": "Sleep",
+   "aliases": [
+    "sleep",
+    "standby",
+    "suspend"
+   ],
+   "fallback": [
+    "logout"
+   ]
+  },
+  {
+   "id": "wake",
+   "label": "Wake",
+   "aliases": [
+    "wake",
+    "wakeup",
+    "resume"
+   ],
+   "fallback": [
+    "login"
+   ]
+  },
+  {
+   "id": "lock",
+   "label": "Lock screen",
+   "aliases": [
+    "lock",
+    "screenlock",
+    "lockscreen",
+    "windowslock"
+   ],
+   "fallback": [
+    "logout"
+   ]
+  },
+  {
+   "id": "unlock",
+   "label": "Unlock screen",
+   "aliases": [
+    "unlock",
+    "windowsunlock",
+    "screenunlock",
+    "trusted"
+   ],
+   "fallback": [
+    "login"
+   ]
+  },
+  {
+   "id": "device_connect",
+   "label": "Device connected",
+   "windows": "Device Connect",
+   "aliases": [
+    "hardwareinsert",
+    "deviceconnect",
+    "deviceconnected",
+    "dock",
+    "proximityconnection",
+    "hardwareinsertion"
+   ],
+   "fallback": []
+  },
+  {
+   "id": "device_disconnect",
+   "label": "Device disconnected",
+   "windows": "Device Disconnect",
+   "aliases": [
+    "hardwareremove",
+    "devicedisconnect",
+    "devicedisconnected",
+    "undock",
+    "hardwareremoval"
+   ],
+   "fallback": []
+  },
+  {
+   "id": "device_fail",
+   "label": "Device failed to connect",
+   "windows": "Device Failed to Connect",
+   "aliases": [
+    "hardwarefail",
+    "devicefail",
+    "devicefailed",
+    "fail",
+    "devicefailedtoconnect"
+   ],
+   "fallback": [
+    "exclamation"
+   ]
+  },
+  {
+   "id": "battery_low",
+   "label": "Low battery",
+   "windows": "Low Battery Alarm",
+   "aliases": [
+    "batterylow",
+    "lowbattery",
+    "lowbatt",
+    "lowbatterywarning",
+    "lowbatteryalarm"
+   ],
+   "fallback": [
+    "exclamation"
+   ]
+  },
+  {
+   "id": "battery_critical",
+   "label": "Critical battery",
+   "windows": "Critical Battery Alarm",
+   "aliases": [
+    "batterycritical",
+    "criticalbattery",
+    "batterycriticalalarm",
+    "criticalbatteryalarm"
+   ],
+   "fallback": [
+    "battery_low",
+    "critical_stop"
+   ]
+  },
+  {
+   "id": "power_connected",
+   "label": "Power connected",
+   "aliases": [
+    "chargingstarted",
+    "wirelesschargingstarted",
+    "powerconnected",
+    "charging",
+    "acconnected",
+    "plugin"
+   ],
+   "fallback": [
+    "device_connect"
+   ]
+  },
+  {
+   "id": "power_disconnected",
+   "label": "Power disconnected",
+   "aliases": [
+    "chargingstopped",
+    "powerdisconnected",
+    "acdisconnected",
+    "unplug"
+   ],
+   "fallback": [
+    "device_disconnect"
+   ]
+  },
+  {
+   "id": "network_up",
+   "label": "Network connected",
+   "aliases": [
+    "networkup",
+    "networkconnect",
+    "networkconnected",
+    "online",
+    "connected"
+   ],
+   "fallback": [
+    "notification"
+   ]
+  },
+  {
+   "id": "network_down",
+   "label": "Network lost",
+   "aliases": [
+    "networkdown",
+    "networkdisconnect",
+    "networkdisconnected",
+    "offline",
+    "disconnected",
+    "calldrop"
+   ],
+   "fallback": [
+    "device_fail"
+   ]
+  },
+  {
+   "id": "default_beep",
+   "label": "Default beep",
+   "windows": "Default Beep",
+   "aliases": [
+    "defaultbeep",
+    "defaultsound",
+    "ding",
+    "beep",
+    "simplebeep",
+    "background",
+    "default"
+   ],
+   "fallback": [
+    "asterisk",
+    "exclamation"
+   ]
+  },
+  {
+   "id": "asterisk",
+   "label": "Asterisk (information)",
+   "windows": "Asterisk",
+   "aliases": [
+    "asterisk",
+    "asterick",
+    "astersk",
+    "information",
+    "info",
+    "infobeep",
+    "default",
+    "asterik"
+   ],
+   "fallback": [
+    "default_beep"
+   ]
+  },
+  {
+   "id": "exclamation",
+   "label": "Exclamation (warning)",
+   "windows": "Exclamation",
+   "aliases": [
+    "exclamation",
+    "exclam",
+    "warning",
+    "warn",
+    "alert",
+    "chord"
+   ],
+   "fallback": [
+    "default_beep"
+   ]
+  },
+  {
+   "id": "critical_stop",
+   "label": "Critical stop",
+   "windows": "Critical Stop",
+   "aliases": [
+    "criticalstop",
+    "critstop",
+    "critical",
+    "criticl",
+    "foreground",
+    "chord"
+   ],
+   "fallback": [
+    "exclamation"
+   ]
+  },
+  {
+   "id": "question",
+   "label": "Question",
+   "windows": "Question",
+   "aliases": [
+    "question",
+    "questn"
+   ],
+   "fallback": [
+    "asterisk"
+   ]
+  },
+  {
+   "id": "program_error",
+   "label": "Program error",
+   "windows": "Program Error",
+   "aliases": [
+    "programerror",
+    "error",
+    "err",
+    "perr"
+   ],
+   "fallback": [
+    "critical_stop"
+   ]
+  },
+  {
+   "id": "notification",
+   "label": "Notification",
+   "windows": "System Notification",
+   "aliases": [
+    "balloon",
+    "notifysystemgeneric",
+    "notification",
+    "systemnotification",
+    "newalert",
+    "notify",
+    "notifications"
+   ],
+   "fallback": [
+    "default_beep"
+   ]
+  },
+  {
+   "id": "new_mail",
+   "label": "New mail",
+   "windows": "New Mail Notification",
+   "aliases": [
+    "notifyemail",
+    "newmail",
+    "newemail",
+    "gotmail",
+    "youvegotmail",
+    "emailreceived",
+    "mail",
+    "notify",
+    "mailnotification",
+    "moremail"
+   ],
+   "fallback": [
+    "notification"
+   ]
+  },
+  {
+   "id": "message",
+   "label": "Instant message",
+   "aliases": [
+    "notifymessaging",
+    "messagenudge",
+    "newmessage",
+    "im",
+    "message",
+    "chatwhsp",
+    "buddyin",
+    "budin",
+    "chatinvt",
+    "buddyout",
+    "budout"
+   ],
+   "fallback": [
+    "notification"
+   ]
+  },
+  {
+   "id": "reminder",
+   "label": "Reminder / calendar",
+   "aliases": [
+    "notifycalendar",
+    "reminder",
+    "remindr*"
+   ],
+   "fallback": [
+    "notification"
+   ]
+  },
+  {
+   "id": "transfer_complete",
+   "label": "Download or file transfer complete",
+   "aliases": [
+    "filedone",
+    "fdone",
+    "filedun",
+    "downloadcomplete",
+    "complete",
+    "filesdone"
+   ],
+   "fallback": [
+    "notification"
+   ]
+  },
+  {
+   "id": "print_complete",
+   "label": "Print complete",
+   "windows": "Print Complete",
+   "aliases": [
+    "printcomplete"
+   ],
+   "fallback": []
+  },
+  {
+   "id": "empty_trash",
+   "label": "Empty trash",
+   "windows": "Empty Recycle Bin",
+   "aliases": [
+    "recycle",
+    "emptyrecyclebin",
+    "emptytrash",
+    "empty",
+    "trash",
+    "recyc",
+    "shred",
+    "shrd",
+    "recyclebin"
+   ],
+   "fallback": []
+  },
+  {
+   "id": "app_open",
+   "label": "Open program",
+   "windows": "Open Program",
+   "aliases": [
+    "openprogram",
+    "openprog",
+    "openprg",
+    "open",
+    "opnw"
+   ],
+   "fallback": [
+    "maximize",
+    "restore"
+   ]
+  },
+  {
+   "id": "app_close",
+   "label": "Close program",
+   "windows": "Close Program",
+   "aliases": [
+    "closeprogram",
+    "close",
+    "clsw"
+   ],
+   "fallback": [
+    "minimize"
+   ]
+  },
+  {
+   "id": "maximize",
+   "label": "Maximize",
+   "windows": "Maximize",
+   "aliases": [
+    "maximize",
+    "windmax",
+    "restoreup"
+   ],
+   "fallback": []
+  },
+  {
+   "id": "minimize",
+   "label": "Minimize",
+   "windows": "Minimize",
+   "aliases": [
+    "minimize",
+    "windmin",
+    "restoredown"
+   ],
+   "fallback": []
+  },
+  {
+   "id": "restore",
+   "label": "Restore",
+   "windows": "Restore",
+   "aliases": [
+    "restore"
+   ],
+   "fallback": [
+    "maximize"
+   ]
+  },
+  {
+   "id": "menu_command",
+   "label": "Menu command",
+   "windows": "Menu Command",
+   "aliases": [
+    "menucommand",
+    "menucmd",
+    "menusel",
+    "menucom"
+   ],
+   "fallback": []
+  },
+  {
+   "id": "menu_popup",
+   "label": "Menu pop-up",
+   "windows": "Menu Pop-up",
+   "aliases": [
+    "menupopup",
+    "menupop"
+   ],
+   "fallback": []
+  },
+  {
+   "id": "start_menu",
+   "label": "Start menu",
+   "aliases": [
+    "windowsxpstart",
+    "startmenu"
+   ],
+   "fallback": []
+  },
+  {
+   "id": "navigation",
+   "label": "Navigation click",
+   "windows": "Start Navigation",
+   "aliases": [
+    "navigationstart",
+    "start",
+    "click",
+    "tap",
+    "keyclick",
+    "effecttick",
+    "tick",
+    "keypress*",
+    "startnavigation"
+   ],
+   "fallback": []
+  },
+  {
+   "id": "popup_blocked",
+   "label": "Pop-up blocked",
+   "aliases": [
+    "popupblocked",
+    "windowspopupblocked",
+    "blockedpopup",
+    "blockpopup"
+   ],
+   "fallback": []
+  },
+  {
+   "id": "information_bar",
+   "label": "Information bar",
+   "aliases": [
+    "informationbar",
+    "windowsinformationbar"
+   ],
+   "fallback": []
+  },
+  {
+   "id": "feed_discovered",
+   "label": "Feed discovered",
+   "aliases": [
+    "feeddiscovered"
+   ],
+   "fallback": []
+  },
+  {
+   "id": "security_prompt",
+   "label": "Security prompt (User Account Control)",
+   "aliases": [
+    "useraccountcontrol",
+    "uac"
+   ],
+   "fallback": [
+    "exclamation"
+   ]
+  },
+  {
+   "id": "ringtone",
+   "label": "Ringtone",
+   "aliases": [
+    "ringtone",
+    "ringin",
+    "phonering",
+    "ring",
+    "ringtones",
+    "ringer",
+    "ringtone*",
+    "ring*"
+   ],
+   "fallback": []
+  },
+  {
+   "id": "ring_out",
+   "label": "Outgoing call ring",
+   "aliases": [
+    "ringout",
+    "ringback",
+    "htcringbacktone"
+   ],
+   "fallback": []
+  },
+  {
+   "id": "alarm",
+   "label": "Alarm",
+   "aliases": [
+    "alarm",
+    "alarms",
+    "alarmclock",
+    "alarm*",
+    "alar"
+   ],
+   "fallback": []
+  },
+  {
+   "id": "camera",
+   "label": "Camera shutter",
+   "aliases": [
+    "cameraclick",
+    "camera",
+    "shutter",
+    "shuttersound",
+    "camerafocus",
+    "camera*"
+   ],
+   "fallback": []
+  },
+  {
+   "id": "video_record",
+   "label": "Video record",
+   "aliases": [
+    "videorecord",
+    "videostart",
+    "videostop",
+    "recstart"
+   ],
+   "fallback": []
+  },
+  {
+   "id": "volume_change",
+   "label": "Volume change",
+   "aliases": [
+    "volumechange",
+    "volume",
+    "effectvolume"
+   ],
+   "fallback": []
+  },
+  {
+   "id": "speech_on",
+   "label": "Speech recognition on",
+   "aliases": [
+    "speechon",
+    "onfeedback"
+   ],
+   "fallback": []
+  },
+  {
+   "id": "speech_off",
+   "label": "Speech recognition off",
+   "aliases": [
+    "speechoff",
+    "offfeedback"
+   ],
+   "fallback": []
+  }
+ ]
+}

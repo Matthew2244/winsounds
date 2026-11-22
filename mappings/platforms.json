@@ -1,0 +1,174 @@
+{
+ "format": 1,
+ "about": "Which generic events (events.json) each platform can trigger, what triggers them, and whether each is on by default. An event a platform cannot trigger is still kept in schemes for previews and other platforms.",
+ "platforms": {
+  "macos": {
+   "startup": {
+    "trigger": "agent starts at login within 15 minutes of boot",
+    "default": true
+   },
+   "login": {
+    "trigger": "agent starts at login, later than 15 minutes after boot",
+    "default": true
+   },
+   "shutdown": {
+    "trigger": "log out, restart or shut down (NSWorkspace will-power-off, then SIGTERM), best effort",
+    "default": true
+   },
+   "sleep": {
+    "trigger": "system will sleep (IOKit power, sleep held briefly so the sound finishes)",
+    "default": true
+   },
+   "wake": {
+    "trigger": "system has powered on after sleep",
+    "default": true
+   },
+   "lock": {
+    "trigger": "screen locked (com.apple.screenIsLocked)",
+    "default": true
+   },
+   "unlock": {
+    "trigger": "screen unlocked (com.apple.screenIsUnlocked)",
+    "default": true
+   },
+   "device_connect": {
+    "trigger": "USB device attached (IOUSBHostDevice) or Bluetooth keyboard, mouse or other HID device connected (IOKit registry)",
+    "default": true
+   },
+   "device_disconnect": {
+    "trigger": "USB device removed or Bluetooth HID device disconnected",
+    "default": true
+   },
+   "power_connected": {
+    "trigger": "power source changes to AC (IOPS); laptops and UPS only",
+    "default": true
+   },
+   "power_disconnected": {
+    "trigger": "power source changes to battery or UPS (IOPS)",
+    "default": true
+   },
+   "battery_low": {
+    "trigger": "battery or UPS at or below 10 percent",
+    "default": true
+   },
+   "battery_critical": {
+    "trigger": "battery or UPS at or below 5 percent",
+    "default": true
+   },
+   "network_up": {
+    "trigger": "network path becomes satisfied (NWPathMonitor), debounced",
+    "default": true
+   },
+   "network_down": {
+    "trigger": "network path becomes unsatisfied, debounced",
+    "default": true
+   },
+   "empty_trash": {
+    "trigger": "~/.Trash goes from having items to empty",
+    "default": true
+   },
+   "app_open": {
+    "trigger": "a regular app launches (NSWorkspace)",
+    "default": false
+   },
+   "app_close": {
+    "trigger": "a regular app quits (NSWorkspace)",
+    "default": false
+   },
+   "new_mail": {
+    "trigger": "Mail's inbox unread count rises (polled only while Mail is running; asks for Automation permission once)",
+    "default": false
+   },
+   "default_beep": {
+    "trigger": "system alert sound, when 'winsounds alert on' installs it",
+    "default": true
+   }
+  },
+  "android": {
+   "startup": {
+    "trigger": "ACTION_BOOT_COMPLETED / ACTION_LOCKED_BOOT_COMPLETED",
+    "default": true
+   },
+   "shutdown": {
+    "trigger": "ACTION_SHUTDOWN",
+    "default": true
+   },
+   "lock": {
+    "trigger": "ACTION_SCREEN_OFF",
+    "default": true
+   },
+   "unlock": {
+    "trigger": "ACTION_USER_PRESENT",
+    "default": true
+   },
+   "wake": {
+    "trigger": "ACTION_SCREEN_ON",
+    "default": false
+   },
+   "device_connect": {
+    "trigger": "USB_DEVICE_ATTACHED, BluetoothDevice.ACTION_ACL_CONNECTED, headset plugged",
+    "default": true
+   },
+   "device_disconnect": {
+    "trigger": "USB_DEVICE_DETACHED, ACTION_ACL_DISCONNECTED, headset unplugged",
+    "default": true
+   },
+   "power_connected": {
+    "trigger": "ACTION_POWER_CONNECTED",
+    "default": true
+   },
+   "power_disconnected": {
+    "trigger": "ACTION_POWER_DISCONNECTED",
+    "default": true
+   },
+   "battery_low": {
+    "trigger": "ACTION_BATTERY_LOW",
+    "default": true
+   },
+   "battery_critical": {
+    "trigger": "battery level at or below 5 percent (ACTION_BATTERY_CHANGED)",
+    "default": true
+   },
+   "network_up": {
+    "trigger": "ConnectivityManager.NetworkCallback onAvailable",
+    "default": true
+   },
+   "network_down": {
+    "trigger": "ConnectivityManager.NetworkCallback onLost",
+    "default": true
+   },
+   "notification": {
+    "trigger": "NotificationListenerService.onNotificationPosted",
+    "default": false
+   },
+   "new_mail": {
+    "trigger": "notification posted by the default mail app",
+    "default": false
+   },
+   "message": {
+    "trigger": "notification posted by a messaging app",
+    "default": false
+   },
+   "app_open": {
+    "trigger": "UsageStatsManager / accessibility window change",
+    "default": false
+   },
+   "app_close": {
+    "trigger": "UsageStatsManager",
+    "default": false
+   },
+   "ringtone": {
+    "trigger": "set as the system ringtone (RingtoneManager)",
+    "default": false
+   },
+   "alarm": {
+    "trigger": "set as the alarm sound (RingtoneManager.TYPE_ALARM)",
+    "default": false
+   },
+   "camera": {
+    "trigger": "not available to third-party apps",
+    "default": false
+   }
+  }
+ }
+}

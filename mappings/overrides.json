@@ -1,0 +1,39 @@
+{
+ "format": 1,
+ "about": "Hand fixes, applied on every import so a re-import keeps them. Keyed by scheme id (see `winsounds list --ids`). Per scheme: \"name\" renames it; \"events\" sets event -> filename or list of filenames (original filenames, as in the source folder; an empty list clears the event); \"hide\": true keeps it out of `winsounds list`.",
+ "schemes": {
+  "windows-10": {
+   "events": {
+    "default_beep": [
+     "Windows Background.wav"
+    ],
+    "asterisk": [
+     "Windows Background.wav"
+    ],
+    "exclamation": [
+     "Windows Background.wav"
+    ],
+    "critical_stop": [
+     "Windows Foreground.wav"
+    ]
+   },
+   "note": "Windows 10 and 11 use Background for Default Beep, Asterisk and Exclamation, Foreground for Critical Stop."
+  },
+  "windows-11": {
+   "events": {
+    "default_beep": [
+     "Windows Background.wav"
+    ],
+    "asterisk": [
+     "Windows Background.wav"
+    ],
+    "exclamation": [
+     "Windows Background.wav"
+    ],
+    "critical_stop": [
+     "Windows Foreground.wav"
+    ]
+   }
+  }
+ }
+}
