@@ -22,6 +22,17 @@ Needs the Xcode command line tools (`swiftc`, `/usr/bin/python3`) and ffmpeg
 (`brew install ffmpeg`) for importing WMA, Ogg and odd WAV files. Nothing needs
 admin rights.
 
+## Where to get sounds
+
+Bring your own. Some places people find them:
+
+- A Windows PC or virtual machine: copy `C:\Windows\Media` (and any `Media\<theme>` folders) to the Mac.
+- An old backup or a Windows install disc you own. The sounds sit in the setup files.
+- Sound packs people have shared over the years, including on the Internet Archive.
+- Android's stock sounds are open source (Apache 2.0), in AOSP under `frameworks/base/data/sounds`.
+
+Point `winsounds import` at the folder and it sorts each file into its scheme and event by name.
+
 ## Commands
 
 Every command prints one sentence or a short list, written once.
