@@ -50,7 +50,12 @@
   "mac os 7 alerts (macos8_error_sounds)": "Mac OS 7 Alerts",
   "mac os 8.5-9 platinum soundset": "Mac OS 8.5-9 Platinum",
   "mac os x classic alerts (pre-big sur)": "Mac OS X Classic Alerts",
-  "packard bell": "Packard Bell"
+  "packard bell": "Packard Bell",
+  "ios tones": "iOS Tones",
+  "ios 4-6 ui": "iOS 4-6 UI",
+  "ios 7+ ui": "iOS 7+ UI",
+  "ios 4-6 voiceover": "iOS 4-6 VoiceOver",
+  "ios 7+ voiceover": "iOS 7+ VoiceOver"
  },
  "standalone": [
   "office97",
@@ -113,7 +118,8 @@
   "aol": "AOL sounds. Personal use only; do not redistribute.",
   "android": "Android Open Source Project sounds, Apache License 2.0 (check the source's NOTICE).",
   "aosp": "Android Open Source Project sounds, Apache License 2.0 (check the source's NOTICE).",
-  "mac": "Apple sounds. Personal use only; do not redistribute."
+  "mac": "Apple sounds. Personal use only; do not redistribute.",
+  "ios ": "Apple sounds. Personal use only; do not redistribute."
  },
  "source_by_name": {
   "windows": "Microsoft Windows",
@@ -125,7 +131,8 @@
   "netmeeting": "Microsoft NetMeeting",
   "aol": "AOL",
   "android": "Android",
-  "mac": "Apple"
+  "mac": "Apple",
+  "ios ": "Apple"
  },
  "order": [
   "Windows 3",
@@ -163,6 +170,7 @@
   "Mac Startup",
   "Mac OS",
   "Classic Mac",
+  "iOS",
   "Android"
  ],
  "merge_folders": [
@@ -176,7 +184,9 @@
   "m4a",
   "flac",
   "aiff",
-  "original audio"
+  "original audio",
+  "alert tones",
+  "text tones"
  ],
  "event_folders": {
   "newwavelabs": "ringtone",
@@ -265,6 +275,9 @@
   "Droplet",
   "Tink",
   "Ping",
-  "Glass"
+  "Glass",
+  "Reflection",
+  "Opening",
+  "Marimba"
  ]
 }

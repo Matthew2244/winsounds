@@ -116,7 +116,9 @@
     "lock",
     "screenlock",
     "lockscreen",
-    "windowslock"
+    "windowslock",
+    "springboardscreenlocked",
+    "iosscreenoff"
    ],
    "fallback": [
     "logout"
@@ -129,7 +131,8 @@
     "unlock",
     "windowsunlock",
     "screenunlock",
-    "trusted"
+    "trusted",
+    "lockscreentouchidauthenticated"
    ],
    "fallback": [
     "login"
@@ -145,7 +148,8 @@
     "deviceconnected",
     "dock",
     "proximityconnection",
-    "hardwareinsertion"
+    "hardwareinsertion",
+    "brailledisplayconnected"
    ],
    "fallback": []
   },
@@ -158,7 +162,8 @@
     "devicedisconnect",
     "devicedisconnected",
     "undock",
-    "hardwareremoval"
+    "hardwareremoval",
+    "brailledisplaydisconnected"
    ],
    "fallback": []
   },
@@ -186,7 +191,8 @@
     "lowbattery",
     "lowbatt",
     "lowbatterywarning",
-    "lowbatteryalarm"
+    "lowbatteryalarm",
+    "lowpower"
    ],
    "fallback": [
     "exclamation"
@@ -216,7 +222,10 @@
     "powerconnected",
     "charging",
     "acconnected",
-    "plugin"
+    "plugin",
+    "connectpower",
+    "beepbeep",
+    "newchargingsound"
    ],
    "fallback": [
     "device_connect"
@@ -275,7 +284,9 @@
     "beep",
     "simplebeep",
     "background",
-    "default"
+    "default",
+    "smsreceived1",
+    "tritone"
    ],
    "fallback": [
     "asterisk",
@@ -369,7 +380,16 @@
     "systemnotification",
     "newalert",
     "notify",
-    "notifications"
+    "notifications",
+    "tritone",
+    "newtritone",
+    "smsreceived1",
+    "smsreceived",
+    "bubbleappear",
+    "sentmessage",
+    "mailsent",
+    "tweetsent",
+    "sentmail"
    ],
    "fallback": [
     "default_beep"
@@ -389,7 +409,8 @@
     "mail",
     "notify",
     "mailnotification",
-    "moremail"
+    "moremail",
+    "newmailswoosh"
    ],
    "fallback": [
     "notification"
@@ -403,6 +424,12 @@
     "messagenudge",
     "newmessage",
     "im",
+    "smsreceived1",
+    "smsreceived",
+    "tritone",
+    "newtritone",
+    "receivedmessage",
+    "smsalert*",
     "message",
     "chatwhsp",
     "buddyin",
@@ -421,7 +448,9 @@
    "aliases": [
     "notifycalendar",
     "reminder",
-    "remindr*"
+    "remindr*",
+    "calendaralertchord",
+    "calendaralert"
    ],
    "fallback": [
     "notification"
@@ -504,7 +533,8 @@
    "aliases": [
     "maximize",
     "windmax",
-    "restoreup"
+    "restoreup",
+    "folderopened"
    ],
    "fallback": []
   },
@@ -515,7 +545,8 @@
    "aliases": [
     "minimize",
     "windmin",
-    "restoredown"
+    "restoredown",
+    "folderclosed"
    ],
    "fallback": []
   },
@@ -548,7 +579,8 @@
    "windows": "Menu Pop-up",
    "aliases": [
     "menupopup",
-    "menupop"
+    "menupop",
+    "popupappeared"
    ],
    "fallback": []
   },
@@ -573,6 +605,11 @@
     "keyclick",
     "effecttick",
     "tick",
+    "tock",
+    "keypressclick",
+    "keyboardpressnormal",
+    "navigationpush",
+    "screenchange",
     "keypress*",
     "startnavigation"
    ],
@@ -627,6 +664,7 @@
     "ring",
     "ringtones",
     "ringer",
+    "vcringing",
     "ringtone*",
     "ring*"
    ],
@@ -663,6 +701,7 @@
     "shutter",
     "shuttersound",
     "camerafocus",
+    "photoshutter",
     "camera*"
    ],
    "fallback": []
@@ -674,7 +713,11 @@
     "videorecord",
     "videostart",
     "videostop",
-    "recstart"
+    "recstart",
+    "beginrecord",
+    "beginvideorecord",
+    "endrecord",
+    "endvideorecord"
    ],
    "fallback": []
   },
@@ -684,7 +727,8 @@
    "aliases": [
     "volumechange",
     "volume",
-    "effectvolume"
+    "effectvolume",
+    "ringerchanged"
    ],
    "fallback": []
   },
@@ -693,7 +737,8 @@
    "label": "Speech recognition on",
    "aliases": [
     "speechon",
-    "onfeedback"
+    "onfeedback",
+    "jblbegin"
    ],
    "fallback": []
   },
@@ -702,7 +747,8 @@
    "label": "Speech recognition off",
    "aliases": [
     "speechoff",
-    "offfeedback"
+    "offfeedback",
+    "jblcancel"
    ],
    "fallback": []
   }

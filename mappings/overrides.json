@@ -34,6 +34,29 @@
      "Windows Foreground.wav"
     ]
    }
+  },
+  "ios-tones": {
+   "events": {
+    "default_beep": [
+     "Tri-Tone.m4a"
+    ],
+    "new_mail": [
+     "Ding.m4a"
+    ],
+    "reminder": [
+     "Chord.m4a"
+    ],
+    "alarm": [
+     "Alarm.m4a",
+     "Radar.m4a"
+    ],
+    "exclamation": [
+     "Alert.m4a"
+    ],
+    "critical_stop": [],
+    "shutdown": []
+   },
+   "note": "iOS names: Ding is New Mail, Chord is Calendar Alert, Swoosh is Sent Mail. Chime is not Windows' chimes. Alarm is the iOS alarm ringtone."
   }
  }
 }

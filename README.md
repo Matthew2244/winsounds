@@ -30,6 +30,7 @@ Bring your own. Some places people find them:
 - An old backup or a Windows install disc you own. The sounds sit in the setup files.
 - Sound packs people have shared over the years, including on the Internet Archive.
 - Android's stock sounds are open source (Apache 2.0), in AOSP under `frameworks/base/data/sounds`.
+- iPhone ringtones and alert tones: macOS carries the current set in `/System/Library/PrivateFrameworks/ToneLibrary.framework/Versions/A/Resources/` (copy them out; `.m4r` is plain AAC, rename it `.m4a`). Older iOS UI and VoiceOver sounds (`lock.caf`, `sms-received1.caf`, `Tock.caf`, ...) turn up in iOS filesystem dumps. Folders named `iOS Tones`, `iOS 4-6 UI`, `iOS 7+ UI` and `iOS ... VoiceOver` import as schemes; the iOS filenames are in `mappings/events.json`.
 
 Point `winsounds import` at the folder and it sorts each file into its scheme and event by name.
 
