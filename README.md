@@ -31,6 +31,8 @@ Bring your own. Some places people find them:
 - Sound packs people have shared over the years, including on the Internet Archive.
 - Android's stock sounds are open source (Apache 2.0), in AOSP under `frameworks/base/data/sounds`.
 - iPhone ringtones and alert tones: macOS carries the current set in `/System/Library/PrivateFrameworks/ToneLibrary.framework/Versions/A/Resources/` (copy them out; `.m4r` is plain AAC, rename it `.m4a`). Older iOS UI and VoiceOver sounds (`lock.caf`, `sms-received1.caf`, `Tock.caf`, ...) turn up in iOS filesystem dumps. Folders named `iOS Tones`, `iOS 4-6 UI`, `iOS 7+ UI` and `iOS ... VoiceOver` import as schemes; the iOS filenames are in `mappings/events.json`.
+- Linux desktop sound themes are open source and use the freedesktop naming spec (`desktop-login.oga`, `device-added.oga`, `trash-empty.oga`, ...), which the mappings know: the freedesktop reference theme, Ubuntu's Yaru and older `ubuntu-sounds`, KDE Oxygen and Ocean, elementary OS, Linux Mint and Deepin. Each project's git repo or package has them, each under its own license (CC BY-SA, LGPL, GPL and others; check before sharing). GNOME's alert sounds (bark, drip, glass, sonar; click, hum, string, swing) import as alert-sound schemes from a folder with "alerts" in its name.
+- Phone and messenger sounds (Windows Phone, BlackBerry, Nokia, Skype, MSN, AIM, ICQ) turn up on the Internet Archive. Their filenames are mapped too; folders named `Ringtones`, `Notifications` and `Alarms` give their files that event. They belong to their makers, so they're personal use only.
 
 Point `winsounds import` at the folder and it sorts each file into its scheme and event by name.
 

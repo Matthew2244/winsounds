@@ -20,7 +20,11 @@
     "bootsound",
     "poweron",
     "tada",
-    "strt"
+    "strt",
+    "wartystartup",
+    "systempoweron",
+    "bestartup",
+    "systemready"
    ],
    "fallback": [
     "login"
@@ -40,7 +44,11 @@
     "signin",
     "welcome",
     "welcom98",
-    "hello"
+    "hello",
+    "desktoplogin",
+    "linuxmintlogin",
+    "skypelogin",
+    "sysloginshort"
    ],
    "fallback": [
     "startup"
@@ -59,7 +67,11 @@
     "signout",
     "goodbye",
     "gdbye",
-    "bye"
+    "bye",
+    "desktoplogout",
+    "desktoplogoff",
+    "linuxmintlogout",
+    "skypelogout"
    ],
    "fallback": [
     "shutdown"
@@ -79,7 +91,9 @@
     "poweroff",
     "shutdownlong",
     "shut",
-    "chimes"
+    "chimes",
+    "systemshutdown",
+    "systempoweroff"
    ],
    "fallback": [
     "logout"
@@ -103,7 +117,8 @@
    "aliases": [
     "wake",
     "wakeup",
-    "resume"
+    "resume",
+    "suspendresume"
    ],
    "fallback": [
     "login"
@@ -149,7 +164,11 @@
     "dock",
     "proximityconnection",
     "hardwareinsertion",
-    "brailledisplayconnected"
+    "brailledisplayconnected",
+    "deviceadded",
+    "plug",
+    "systemconnected",
+    "devicesconnected"
    ],
    "fallback": []
   },
@@ -163,7 +182,9 @@
     "devicedisconnected",
     "undock",
     "hardwareremoval",
-    "brailledisplaydisconnected"
+    "brailledisplaydisconnected",
+    "deviceremoved",
+    "systemdisconnected"
    ],
    "fallback": []
   },
@@ -192,7 +213,10 @@
     "lowbatt",
     "lowbatterywarning",
     "lowbatteryalarm",
-    "lowpower"
+    "lowpower",
+    "alertlowbattery",
+    "systembatterylow",
+    "powerunplugbatterylow"
    ],
    "fallback": [
     "exclamation"
@@ -206,7 +230,9 @@
     "batterycritical",
     "criticalbattery",
     "batterycriticalalarm",
-    "criticalbatteryalarm"
+    "criticalbatteryalarm",
+    "batterycaution",
+    "alarmbattery"
    ],
    "fallback": [
     "battery_low",
@@ -225,7 +251,9 @@
     "plugin",
     "connectpower",
     "beepbeep",
-    "newchargingsound"
+    "newchargingsound",
+    "powerplug",
+    "alertcharging"
    ],
    "fallback": [
     "device_connect"
@@ -238,7 +266,8 @@
     "chargingstopped",
     "powerdisconnected",
     "acdisconnected",
-    "unplug"
+    "unplug",
+    "powerunplug"
    ],
    "fallback": [
     "device_disconnect"
@@ -252,7 +281,9 @@
     "networkconnect",
     "networkconnected",
     "online",
-    "connected"
+    "connected",
+    "networkconnectivityestablished",
+    "wificonnected"
    ],
    "fallback": [
     "notification"
@@ -267,7 +298,11 @@
     "networkdisconnected",
     "offline",
     "disconnected",
-    "calldrop"
+    "calldrop",
+    "networkconnectivitylost",
+    "wifidisconnected",
+    "messageconnectivitylost",
+    "wificalldisconnect"
    ],
    "fallback": [
     "device_fail"
@@ -286,7 +321,9 @@
     "background",
     "default",
     "smsreceived1",
-    "tritone"
+    "tritone",
+    "bell",
+    "bebeep"
    ],
    "fallback": [
     "asterisk",
@@ -305,7 +342,8 @@
     "info",
     "infobeep",
     "default",
-    "asterik"
+    "asterik",
+    "dialoginformation"
    ],
    "fallback": [
     "default_beep"
@@ -321,7 +359,8 @@
     "warning",
     "warn",
     "alert",
-    "chord"
+    "chord",
+    "dialogwarning"
    ],
    "fallback": [
     "default_beep"
@@ -337,7 +376,9 @@
     "critical",
     "criticl",
     "foreground",
-    "chord"
+    "chord",
+    "dialogerror",
+    "dialogerrorcritical"
    ],
    "fallback": [
     "exclamation"
@@ -349,7 +390,8 @@
    "windows": "Question",
    "aliases": [
     "question",
-    "questn"
+    "questn",
+    "dialogquestion"
    ],
    "fallback": [
     "asterisk"
@@ -410,7 +452,12 @@
     "notify",
     "mailnotification",
     "moremail",
-    "newmailswoosh"
+    "newmailswoosh",
+    "messagenewemail",
+    "notificationemailreceived",
+    "lumiaemail",
+    "email",
+    "emailtone"
    ],
    "fallback": [
     "notification"
@@ -429,6 +476,18 @@
     "tritone",
     "newtritone",
     "receivedmessage",
+    "messagenewinstant",
+    "messagenewsms",
+    "notificationmessagereceived",
+    "notificationtextmessageimreceived",
+    "lumiamessage",
+    "imrcv",
+    "imrecv",
+    "imreceived",
+    "chatincoming",
+    "nudge",
+    "messagetone",
+    "imtone",
     "smsalert*",
     "message",
     "chatwhsp",
@@ -448,6 +507,10 @@
    "aliases": [
     "notifycalendar",
     "reminder",
+    "alertcalendar",
+    "notificationreminder",
+    "lumiacalendar",
+    "remind",
     "remindr*",
     "calendaralertchord",
     "calendaralert"
@@ -465,7 +528,13 @@
     "filedun",
     "downloadcomplete",
     "complete",
-    "filesdone"
+    "filesdone",
+    "completecopy",
+    "completedownload",
+    "completionsuccess",
+    "transfercomplete",
+    "notificationdownloadcomplete",
+    "ftcomplete"
    ],
    "fallback": [
     "notification"
@@ -476,7 +545,8 @@
    "label": "Print complete",
    "windows": "Print Complete",
    "aliases": [
-    "printcomplete"
+    "printcomplete",
+    "completeprint"
    ],
    "fallback": []
   },
@@ -493,7 +563,9 @@
     "recyc",
     "shred",
     "shrd",
-    "recyclebin"
+    "recyclebin",
+    "trashempty",
+    "trashemptied"
    ],
    "fallback": []
   },
@@ -520,7 +592,8 @@
    "aliases": [
     "closeprogram",
     "close",
-    "clsw"
+    "clsw",
+    "windowclose"
    ],
    "fallback": [
     "minimize"
@@ -534,7 +607,8 @@
     "maximize",
     "windmax",
     "restoreup",
-    "folderopened"
+    "folderopened",
+    "windowmaximized"
    ],
    "fallback": []
   },
@@ -546,7 +620,8 @@
     "minimize",
     "windmin",
     "restoredown",
-    "folderclosed"
+    "folderclosed",
+    "windowminimized"
    ],
    "fallback": []
   },
@@ -648,7 +723,8 @@
    "label": "Security prompt (User Account Control)",
    "aliases": [
     "useraccountcontrol",
-    "uac"
+    "uac",
+    "dialogwarningauth"
    ],
    "fallback": [
     "exclamation"
@@ -665,6 +741,10 @@
     "ringtones",
     "ringer",
     "vcringing",
+    "phoneincomingcall",
+    "notificationphoneringer",
+    "callringingin",
+    "callin",
     "ringtone*",
     "ring*"
    ],
@@ -676,7 +756,10 @@
    "aliases": [
     "ringout",
     "ringback",
-    "htcringbacktone"
+    "htcringbacktone",
+    "phoneoutgoingcalling",
+    "callringingout",
+    "callout"
    ],
    "fallback": []
   },
@@ -687,6 +770,8 @@
     "alarm",
     "alarms",
     "alarmclock",
+    "alarmclockelapsed",
+    "lumiaclock",
     "alarm*",
     "alar"
    ],
@@ -702,6 +787,7 @@
     "shuttersound",
     "camerafocus",
     "photoshutter",
+    "screencapture",
     "camera*"
    ],
    "fallback": []
@@ -728,7 +814,8 @@
     "volumechange",
     "volume",
     "effectvolume",
-    "ringerchanged"
+    "ringerchanged",
+    "audiovolumechange"
    ],
    "fallback": []
   },
