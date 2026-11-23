@@ -422,6 +422,8 @@
    "windows": "System Notification",
    "aliases": [
     "balloon",
+    "alertchime",
+    "chirp",
     "notifysystemgeneric",
     "notification",
     "systemnotification",

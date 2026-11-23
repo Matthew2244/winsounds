@@ -90,7 +90,8 @@
   "phones",
   "messengers",
   "retro",
-  "consoles"
+  "consoles",
+  "devices"
  ],
  "theme_prefixes": {
   "windaVinci": "da Vinci",
@@ -130,6 +131,7 @@
   "aol": "AOL sounds. Personal use only; do not redistribute.",
   "android": "Android Open Source Project sounds, Apache License 2.0 (check the source's NOTICE).",
   "aosp": "Android Open Source Project sounds, Apache License 2.0 (check the source's NOTICE).",
+  "nvda": "NVDA and NVDA add-on sounds, GPL-2.0 (check the COPYING file beside them).",
   "mac": "Apple sounds. Personal use only; do not redistribute.",
   "ios ": "Apple sounds. Personal use only; do not redistribute."
  },
@@ -142,6 +144,10 @@
   "sega": "Sega",
   "steam": "Valve",
   "tamagotchi": "Bandai",
+  "nvda": "NV Access",
+  "jaws": "Freedom Scientific",
+  "tesla": "Tesla",
+  "nextel": "Nextel",
   "windows phone": "Microsoft Windows Phone",
   "windows 10 mobile": "Microsoft Windows Phone",
   "windows live messenger": "Microsoft MSN",
