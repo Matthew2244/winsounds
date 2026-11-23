@@ -89,7 +89,8 @@
   "linux",
   "phones",
   "messengers",
-  "retro"
+  "retro",
+  "consoles"
  ],
  "theme_prefixes": {
   "windaVinci": "da Vinci",
@@ -133,6 +134,14 @@
   "ios ": "Apple sounds. Personal use only; do not redistribute."
  },
  "source_by_name": {
+  "xbox": "Microsoft Xbox",
+  "playstation": "Sony",
+  "ps vita": "Sony",
+  "nintendo": "Nintendo",
+  "game boy": "Nintendo",
+  "sega": "Sega",
+  "steam": "Valve",
+  "tamagotchi": "Bandai",
   "windows phone": "Microsoft Windows Phone",
   "windows 10 mobile": "Microsoft Windows Phone",
   "windows live messenger": "Microsoft MSN",
@@ -155,7 +164,6 @@
   "skype": "Skype",
   "beos": "Be Inc.",
   "next": "NeXT",
-  "playstation": "Sony",
   "wii": "Nintendo",
   "windows": "Microsoft Windows",
   "plus!": "Microsoft Plus!",
@@ -232,7 +240,14 @@
   "BeOS",
   "NeXT",
   "PlayStation",
-  "Nintendo"
+  "Nintendo",
+  "Xbox",
+  "PS Vita",
+  "Game Boy",
+  "Sega",
+  "Steam",
+  "Tamagotchi",
+  "Console Boot"
  ],
  "merge_folders": [
   "ogg",
